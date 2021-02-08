@@ -54,7 +54,6 @@ class FollowSerializer(serializers.ModelSerializer):
         slug_field='username',
         queryset=User.objects.all(),
     )
-    
     def validate(self, data):
         if data['user'] == data['following']:
             raise serializers.ValidationError(

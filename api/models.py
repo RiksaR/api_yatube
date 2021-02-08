@@ -95,8 +95,7 @@ class Follow(models.Model):
         constraints = [UniqueConstraint(
             fields=['user', 'following'],
             name='unique_following',
-            ),
-        ]
+            )]
 
     def __str__(self):
         """ Return a string representation
